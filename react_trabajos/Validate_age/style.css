@@ -1,0 +1,29 @@
+
+
+.container{
+  margin: 25px auto;
+  border-radius: 25px;
+  width: 400px;
+  text-align: center;
+  border: 2px dashed;
+  background-color: rgb(124, 209, 202);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container input{
+  width: 80%;
+  margin: 5px 0px 5px 0px;
+}
+
+.container input:hover{
+  background-color: rgb(178, 202, 223);
+}
+
+
+p{
+  font-size: 18px;
+ color:rgb(184, 255, 5)
+}
