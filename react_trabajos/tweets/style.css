@@ -13,7 +13,7 @@
 }
 
 .container .header {
-    background-color: blue;
+    background-color:rgba(82, 107, 240, 0.8) ;
     color: white;
     width: 100%;
     display: flex;
@@ -42,6 +42,12 @@
     width: 70px;
     height: 70px;
     border-radius:50%;
+    background-color:white;
+    color:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px
 }
 
 .container .main{
@@ -53,7 +59,7 @@
 }
 
 .container .main .container-iteraction{
-    background-color: green;
+    background-color: rgba(116, 235, 122, 0.8);
     width: 96%;
     display: flex;
     justify-content: center;
@@ -61,7 +67,7 @@
     border-radius:15px;
     padding:10px;
     margin: 20px;
-    color: white;
+    color: black;
 }
 
 .container .main .container-iteraction label{
@@ -86,7 +92,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    color: red;
+    color: black;
     font-size: 20px;
 }
 
@@ -94,6 +100,7 @@
     width: 55px;
     padding: 5px;
     border-radius: 10px;
+    cursor:pointer;
 }
 
 .container .container-comments{
@@ -103,13 +110,28 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+
+@keyframes ani-card {
+  from {background-color:blue; width:200px}
+  to {background-color:yellow; width:190px;height:190px}
+}
+
+
 .container .container-comments .card{
-    width: 150px; 
-    height: 150px;
-    background-color: red;
-    padding: 5px;
+    width: 200px; 
+    height: 200px;
+    background-color: rgba(153, 236, 187, 0.8);
+    padding: 10px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 20px;
+    position:relative;
+    animation-name: ani-card;
+    animation-duration: 2s;
+
+
+    -webkit-box-shadow: 0px 3px 0px 2px rgba(0,0,0,0.1), 0px 6px 0px 4px rgba(0,0,0,0.1), 0px 9px 0px 6px rgba(0,0,0,0.1), 0px 12px 0px 8px rgba(0,0,0,0.1), 0px 15px 0px 10px rgba(0,0,0,0.1), 0px 18px 0px 12px rgba(0,0,0,0.1), 0px 21px 0px 14px rgba(0,0,0,0.1), 0px 24px 0px 16px rgba(0,0,0,0.1), 0px 27px 0px 18px rgba(0,0,0,0.1), 0px 30px 0px 20px rgba(0,0,0,0.1), 5px 5px 15px 5px rgba(0,0,0,0);
+box-shadow: 0px 3px 0px 2px rgba(0,0,0,0.1), 0px 6px 0px 4px rgba(0,0,0,0.1), 0px 9px 0px 6px rgba(0,0,0,0.1), 0px 12px 0px 8px rgba(0,0,0,0.1), 0px 15px 0px 10px rgba(0,0,0,0.1), 0px 18px 0px 12px rgba(0,0,0,0.1), 0px 21px 0px 14px rgba(0,0,0,0.1), 0px 24px 0px 16px rgba(0,0,0,0.1), 0px 27px 0px 18px rgba(0,0,0,0.1), 0px 30px 0px 20px rgba(0,0,0,0.1), 5px 5px 15px 5px rgba(0,0,0,0);
 }
 
 .container .container-comments .card .text{
