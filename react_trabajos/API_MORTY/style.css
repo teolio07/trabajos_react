@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    background-image: url('./galaxias-cercanas_0.jpg');
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.header .container-img{
+    width: 400px;
+    height: 200px;
+}
+
+.main{
+    background-color: rgba(36, 41, 79, 0.91);
+    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .search{
+    width: 100%;
+    border-radius: 5px;
+    
+    background-color: gray;
+}
+
+.main .card{
+    width: 400px;
+    height: 200px;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(94, 95, 100, 0.91);
+    word-wrap: wrap;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagen{
+    width: 100px;
+}
+
+#search_container{
+    background-color: white;
+    position: absolute;
+    top: 235px;
+    left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.main .card .image{
+    width: 200px;
+    height: 150px;
+    margin: 5px;
+}
+
+.main .card .name{
+    color: #FFFFFF;
+    width: 30%;
+    margin: 5px;
+    word-wrap: word;
+    text-align: center;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+
+.main .card .gender{
+    color: #FFFFFF;
+}
