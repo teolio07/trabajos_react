@@ -4,7 +4,7 @@ var template = ``;
 var filtroOne = [];
 var filtro = [];
 
-
+let card;
 
 
 const main = document.getElementById('main');
@@ -26,7 +26,7 @@ const AxiosApi = ()=>{
 };
 
 const createCard = (name,gender,image)=>{
-    let card = document.createElement('div');
+    card = document.createElement('div');
 
     let Name = document.createElement('h2');
     let Gender = document.createElement('p');
@@ -60,7 +60,7 @@ const fillCard = async ()=>{
         createCard(element.name,element.gender,element.image)
     });
 
-    input_searcher.addEventListener('keypress',async (e)=>{
+    input_searcher.addEventListener('keyup',async (e)=>{
         filtroOne = [];
         template = ``;
         console.log(e.keyCode)
