@@ -1,8 +1,9 @@
-var input_searcher = document.getElementById('input_searcher');
-var search_container = document.getElementById('search_container')
-var template = ``;
-var filtroOne = [];
-var filtro = [];
+let input_searcher = document.getElementById('input_searcher');
+let search_container = document.getElementById('search_container')
+search_container.style.visibility = 'hidden'
+let template = ``;
+let filtroOne = [];
+let filtro = [];
 
 let card;
 
@@ -24,6 +25,22 @@ const AxiosApi = ()=>{
 
     });
 };
+const AxiosApiSear = (nameCharacter)=>{
+    return new Promise(async (resolve,reject)=>{
+        await axios.get(`https://rickandmortyapi.com/api/character/?name=${nameCharacter}`, {
+        responseType: 'json'
+        })
+            .then(function(res) {
+                resolve(res.data.results)
+      
+            })
+        .catch(function(err) {
+            console.log(err)
+        })
+
+    });
+};
+
 
 const createCard = (name,gender,image)=>{
     card = document.createElement('div');
@@ -69,27 +86,27 @@ const fillCard = async ()=>{
             filtro = []
             filtroOne = [];
             template = ``;
+            search_container.style.visibility = 'hidden'
+
             search_container.innerHTML = `<div></div>`
             
         }
         else{
-            filtro = data.filter(character => character.name == input_searcher.value ||
-                character.name[0]+character.name[1] == input_searcher.value);
+            let data =  await AxiosApiSear(e.target.value)
+            console.log(data)
+            search_container.style.visibility = 'visible'
 
-                for (let i = 0; i < filtro.length; i++){
-        
-                    template += `<div class='title_img'>${filtro[i].name} <img id='imagen' src='${filtro[i].image}'/></div>
-                                    `
-    
+                
+
+                for (let i = 0; i < data.length; i++){
+                    template += `<div class='card'><h2 class='name'>${data[i].name}</h2><p class='gender'>${data[i].gender}</p> <img class='image' src='${data[i].image}'/></div>`
             }
-            console.log(filtro)
             document.getElementById('search_container').innerHTML = template
         }
         
     
     })
 }
-
 
 
 fillCard()
